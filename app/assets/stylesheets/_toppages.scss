@@ -1,0 +1,36 @@
+.header {
+  height: 90px;
+  border-bottom:20px solid #ffa500;
+  background-color: #ff8c00;
+  color: #ffffff;
+  &__logo {
+    text-align: center;
+    font-size: 36px;
+    line-height: 90px;
+  }
+}
+
+.main {
+  height: calc(100vh - 90px - 20px);
+  width:900px;
+  margin: 0 auto;
+  background-color: #fffacd;
+  .items {
+    text-align: center;
+    font-size: 28px;
+    line-height: 90px;
+    .item {
+      display: block;
+      height: 80px;
+      width :360px;
+      margin:0 auto 50px;
+      border-radius: 10px;
+      font-size:20px;
+      color:#fff;
+      text-decoration: none;
+      text-align: center;
+      line-height: 80px;
+      background-color: #00bfff;
+    }
+  }
+}
