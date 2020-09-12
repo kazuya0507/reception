@@ -1,0 +1,129 @@
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header_page {
+  height: 90px;
+  border-bottom:2px solid #BAD3FF;
+  background-color: #D9E5FF;
+  color:#005FFF;
+  .item {
+    font-size: 40px;
+    text-align: center;
+    line-height: 90px;
+  }
+}
+
+.main_page{
+  background-color: #FFFFFF;
+  // height:100%;
+  // height: calc(100vh - 90px);
+  width: 900px;
+  margin: auto;
+  font-weight: 300;
+  text-align: center;
+  .confirmation {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+  .field {
+    padding: 10px;
+    // border-bottom: 1px solid #f8f8f8;
+    font-size: 20px;
+    color:#333;
+    .form_require {
+      color: #fff;
+      background: #ea352d;
+      margin: 0 0 0 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+    }
+    .input_box__half {
+      position: relative;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: inherit;
+      height: 48px;
+      margin: 0;
+      outline: none;
+      padding: 0 16px;
+      width: 30%;
+      margin-top: 16px;
+    }
+    .input_box {
+      position: relative;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: inherit;
+      height: 48px;
+      margin: 0;
+      outline: none;
+      padding: 0 16px;
+      width: 60%;
+      margin-top: 16px;
+    }
+    .birthday_box {
+      position: relative;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: inherit;
+      height: 48px;
+      margin: 0;
+      outline: none;
+      padding: 0 16px;
+      width: 20%;
+      margin-top: 16px;
+    }
+  }
+  .actions {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    .btn-red {
+      text-align: center;
+      padding-top: 30px;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto 20px;
+      .red_btn {
+        background-color: #fff;
+        border: 1px solid #FF0000;
+        line-height: 48px;
+        width: 30%;
+        font-size     : 21pt;
+        color:#FF0000;
+        text-decoration: none;
+        border-radius : 5%;          /* 角丸       */
+        cursor        : pointer;     /* カーソル   */
+      }
+    }
+    .btn-blue {
+      text-align: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      a {
+        width: 30%;
+        display       : inline-block;
+        border-radius : 5%;          /* 角丸       */
+        font-size     : 21pt;        /* 文字サイズ */
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        padding       : 12px 12px;   /* 余白       */
+        background    : #000066;     /* 背景色     */
+        color         : #ffffff;     /* 文字色     */
+        line-height   : 1em;         /* 1行の高さ  */
+        transition    : .3s;         /* なめらか変化 */
+      }
+    }
+  }
+}
