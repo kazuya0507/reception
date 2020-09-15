@@ -1,0 +1,91 @@
+.header_page
+  .item
+    御申込
+  
+.main_page
+  .confirmation 入力画面
+  = form_with model: @seminar, local: true do |f|
+    .field
+      = f.label :お名前
+      %span.form_require 必須
+      %br/
+      = f.text_field :first_name,  :placeholder=>"福岡", class: "input_box__half"
+      = f.text_field :last_name, :placeholder=>"太郎", class: "input_box__half"
+
+    .field
+      = f.label :"お名前(カナ)"
+      %span.form_require 必須
+      %br/
+      = f.text_field :first_name_kana, :placeholder=>"フクオカ", class: "input_box__half"
+      = f.text_field :last_name_kana, :placeholder=>"タロウ", class: "input_box__half"
+
+    .field
+      = f.label :生年月日
+      %span.form_require 必須
+      %br/
+      = f.date_select :birth_date, {use_month_numbers: true ,start_year: 1950, end_year: (Time.now.year - 10), prompt:"--"}, {class: "birthday_box"}
+
+    .field
+      = f.label :email
+      %span.form_require 必須
+      %br/
+      = f.email_field :mail, autofocus: true, :placeholder=>"PC・携帯どちらでも可",  autocomplete: "email", class: "input_box"
+
+    .field
+      = f.label :郵便番号
+      %span.form_require 必須
+      %br/
+      = f.text_field :postal_code, :placeholder=>"111-1111", class: "input_box"
+
+    .field
+      = f.label :都道府県
+      %span.form_require 必須
+      %br/
+      = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt:"--"}, { class: "input_box"}
+
+    .field
+      = f.label :市区町村
+      %span.form_require 必須
+      %br/
+      = f.text_field :city, :placeholder=>"〇〇市又は〇〇区", class: "input_box"
+
+    .field
+      = f.label :番地
+      %span.form_require 必須
+      %br/
+      = f.text_field :block, :placeholder=>"〇〇■丁目▲番地×など", class: "input_box"
+
+    .field
+      = f.label :"マンション名,ビル名 部屋番号"
+      %br/
+      = f.text_field  :building, :placeholder=>"マンション111号室など", class: "input_box"
+
+    .field
+      = f.label :電話番号
+      %span.form_require 必須
+      %br/
+      = f.text_field :phone_number, :placeholder=>"000-0000-0000など", class: "input_box"
+
+    .field
+      = f.label :会社名
+      %span.form_require 必須
+      %br/
+      = f.text_field :company_name, class: "input_box"
+
+    .field
+      = f.label :会社住所
+      %span.form_require 必須
+      %br/
+      = f.text_field :company_address, :placeholder=>"〇〇市〇〇区〇〇丁目１−２−３", class: "input_box"
+
+    .field
+      = f.label :会社電話番号
+      %span.form_require 必須
+      %br/
+      = f.text_field :company_phone, :placeholder=>"092-123-4567など", class: "input_box"
+
+    .actions
+      .btn-red
+        = f.submit "完了", class: "red_btn"
+      .btn-blue
+        = link_to 'もどる', root_path, class: "blue_btn"
