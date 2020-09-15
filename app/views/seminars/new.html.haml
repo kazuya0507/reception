@@ -4,7 +4,7 @@
   
 .main_page
   .confirmation 入力画面
-  = form_with model: @seminer, local: true do |f|
+  = form_with model: @seminar, local: true do |f|
     .field
       = f.label :お名前
       %span.form_require 必須
@@ -29,7 +29,7 @@
       = f.label :email
       %span.form_require 必須
       %br/
-      = f.email_field :email, autofocus: true, :placeholder=>"PC・携帯どちらでも可",  autocomplete: "email", class: "input_box"
+      = f.email_field :mail, autofocus: true, :placeholder=>"PC・携帯どちらでも可",  autocomplete: "email", class: "input_box"
 
     .field
       = f.label :郵便番号
@@ -82,7 +82,7 @@
       = f.label :会社電話番号
       %span.form_require 必須
       %br/
-      = f.text_field :company_phone, class: "input_box"
+      = f.text_field :company_phone, :placeholder=>"092-123-4567など", class: "input_box"
 
     .actions
       .btn-red
